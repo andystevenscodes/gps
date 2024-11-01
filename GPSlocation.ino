@@ -1,3 +1,28 @@
+/*
+  GNSS and LoRaWAN Integration with Arduino
+  =========================================
+
+  This project, developed by Andy Stevens from Ant-Networks, demonstrates how to integrate a GNSS (GPS) module with an Arduino MKR WAN series board to transmit real-time GPS data over LoRaWAN to The Things Network (TTN). This code utilizes Over-The-Air Activation (OTAA) to join the LoRa network and transmit GPS data (latitude, longitude, altitude, speed, and satellite count) in an optimized 9-byte format.
+
+  Creator: Andy Stevens
+  Organization: Ant-Networks
+  Project Purpose: IoT Tracking Project
+  Libraries Used:
+    - Wire.h: for I2C communication with GNSS
+    - SparkFun_u-blox_GNSS_Arduino_Library.h: to interface with GNSS
+    - MKRWAN.h: for LoRaWAN communication with TTN
+    - arduino_secrets.h: for secure storage of TTN credentials (appEui, appKey)
+
+  Usage:
+    - Connect GNSS and LoRa components to the Arduino MKR WAN board.
+    - Load TTN credentials in `arduino_secrets.h`.
+    - Upload this code to the board and open Serial Monitor for debugging.
+    - Data will be transmitted to TTN every minute when a GPS signal is acquired.
+
+  License: MIT License
+*/
+
+
 #include <Wire.h>                          // I2C for GNSS
 #include <SparkFun_u-blox_GNSS_Arduino_Library.h> // GNSS library
 #include <MKRWAN.h>                         // LoRa library for MKR WAN
