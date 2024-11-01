@@ -7,21 +7,21 @@ Features
   LoRaWAN Communication: Uses the MKRWAN library for LoRa communication with TTN.
   Low Power Consumption: Designed for efficient data retrieval and transmission, ideal for battery-powered projects.
   Payload Optimization: Scales and encodes data for efficient 9-byte transmission.
-
-Hardware Requirements
+**
+Hardware Requirements**
 
   Arduino MKR WAN board (e.g., MKR WAN 1300 or MKR WAN 1310)
   GNSS module compatible with the SparkFun u-blox GNSS library
   Connection cables and a computer for programming the Arduino
 
-Libraries Used
+**Libraries Used**
 
   Wire - for I2C communication with the GNSS module
   SparkFun u-blox GNSS Arduino Library - for GNSS module interaction
   KRWAN - for LoRaWAN communication
   arduino_secrets.h - for storing TTN credentials securely
 
-Setup
+**Setup**
 
   Clone this repository and open the project in the Arduino IDE.
   Install the necessary libraries using the Library Manager in Arduino IDE:
@@ -37,15 +37,15 @@ Setup
 
     Connect the GNSS module to the I2C pins on the Arduino (typically SDA and SCL).
 
-Usage
+**Usage**
 
   Upload the code to the Arduino board.
   Open the Serial Monitor (set to 9600 baud rate) to observe debugging information.
   The code will:
-        Initialize the GNSS and LoRa modules.
-        Join the TTN network using OTAA.
-        Wait for a valid GPS signal.
-        Periodically transmit GPS data (every 1 minute) to TTN over LoRa.
+  1.   Initialize the GNSS and LoRa modules.
+  2.   Join the TTN network using OTAA.
+  3.   Wait it for a valid GPS signal.
+  4.   Periodically transmit GPS data (every 1 minute) to TTN over LoRa.
 
 LoRa Data Packet Structure
 
